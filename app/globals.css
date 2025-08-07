@@ -8,8 +8,30 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Updated font families for your portfolio */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-heading: var(--font-poppins);
+  --font-code: var(--font-jetbrains-mono);
+  
+  /* Custom font family definitions */
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-fira-code: 'Fira Code', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  
+  /* Portfolio-specific color scheme */
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #fee2e2;
+  --color-primary-200: #fecaca;
+  --color-primary-300: #fca5a5;
+  --color-primary-400: #f87171;
+  --color-primary-500: #ef4444;
+  --color-primary-600: #dc2626;
+  --color-primary-700: #b91c1c;
+  --color-primary-800: #991b1b;
+  --color-primary-900: #7f1d1d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +44,67 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Use Inter as the default font instead of Arial */
+  font-family: var(--font-inter);
+  /* Improved text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom font utility classes */
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains-mono);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-fira {
+  font-family: var(--font-fira-code);
+}
+
+.font-heading {
+  font-family: var(--font-poppins);
+}
+
+.font-code {
+  font-family: var(--font-jetbrains-mono);
+}
+
+/* Code elements styling */
+code, pre, kbd, samp {
+  font-family: var(--font-jetbrains-mono);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Typography improvements */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
 }
