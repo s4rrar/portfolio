@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   keywords: ["Computer Science", "Cyber Security", "Full Stack Developer", "Data Science"],
   authors: [{ name: "AL-Hassan Sarrar" }],
   viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
